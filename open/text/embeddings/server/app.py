@@ -141,6 +141,7 @@ def initialize_embeddings():
 
 def _create_embedding(input: Union[str, List[str]]):
     global embeddings
+    global tokenizer
     model_name = os.environ.get("MODEL")
     if model_name is None:
         model_name = DEFAULT_MODEL_NAME
